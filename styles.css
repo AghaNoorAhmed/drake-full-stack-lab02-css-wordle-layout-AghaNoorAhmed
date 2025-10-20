@@ -8,25 +8,34 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  margin: 0;
   font-family: system-ui, sans-serif;
-  gap: 24px;
+  gap: 20px;
 }
 
+/* Keep header and footer centered */
+header h1,
+footer p {
+  margin: 0;
+  text-align: center;
+}
+
+/* Center the game board itself */
 .game-board {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 8px;
 }
 
+/* Each row = 5 tiles side by side */
 .row {
   display: flex;
   gap: 10px;
   justify-content: center;
 }
 
+/* Tile look */
 .tile {
   width: 60px;
   height: 60px;
@@ -39,14 +48,4 @@ body {
   font-size: 1.25rem;
   box-sizing: border-box;
   border-radius: 4px;
-}
-
-header h1 {
-  text-align: center;
-  margin: 0;
-}
-
-footer {
-  text-align: center;
-  margin: 0;
 }
