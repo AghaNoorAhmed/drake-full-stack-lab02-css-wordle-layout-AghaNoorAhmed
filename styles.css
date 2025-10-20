@@ -1,41 +1,45 @@
-html, body {
-  height: 100%;
-  margin: 0;
+/* reset + base */
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: system-ui, sans-serif;
 }
 
-body {
+/* centered vertical stack for header + board + footer */
+.page {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-family: system-ui, sans-serif;
-  gap: 20px;
+  gap: 24px;          /* space between header, board, footer */
 }
 
-/* Keep header and footer centered */
-header h1,
-footer p {
+/* header/footer look */
+.site-header h1,
+.site-footer p {
   margin: 0;
   text-align: center;
 }
 
-/* Center the game board itself */
+/* the board */
 .game-board {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 8px;
+  gap: 8px;           /* space between rows */
 }
 
-/* Each row = 5 tiles side by side */
+/* each row: 5 tiles */
 .row {
   display: flex;
-  gap: 10px;
+  gap: 10px;          /* space between tiles */
   justify-content: center;
 }
 
-/* Tile look */
+/* tile look */
 .tile {
   width: 60px;
   height: 60px;
@@ -46,6 +50,5 @@ footer p {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 1.25rem;
-  box-sizing: border-box;
   border-radius: 4px;
 }
